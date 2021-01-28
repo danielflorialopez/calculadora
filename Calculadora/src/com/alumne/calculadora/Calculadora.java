@@ -271,6 +271,7 @@ public class Calculadora {
 
 	}
 
+	// serveix per a definir les variables, inicialitzar-les
 	public void inicialitza() {
 		operacio = "null";
 		valor1 = 0;
@@ -279,18 +280,23 @@ public class Calculadora {
 		inicialitza_resultat = true;
 	}
 
+	// retorna el text de text_resultat
 	public String getResultatString() {
 		return text_resultat.getText();
 	}
 
+	// seteja el text de text_resultat amb el valor de s
 	public void setResultatString(String s) {
 		text_resultat.setText(s);
 	}
 
+	// retorna el text de text_resultat en forma d'int
 	public int getResultatInt() {
 		String resultat = text_resultat.getText();
 		return Integer.parseInt(resultat);
 	}
+
+	// llegim el text que hi ha a setresultats i concatenem els diferents numeros
 
 	public void afegeixNouDigit(int digit) {
 		if (inicialitza_resultat)
