@@ -319,6 +319,7 @@ public class Calculadora {
 	}
 
 	// aquÃ­ s'acaben els meus comentaris
+	// Començen els de Eric
 	public void executarOperador(String new_operacio) {
 
 		int resultat;
