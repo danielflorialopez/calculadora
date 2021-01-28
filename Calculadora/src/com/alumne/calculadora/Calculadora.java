@@ -318,6 +318,7 @@ public class Calculadora {
 		inicialitza_resultat = false;
 	}
 
+	// aquí s'acaben els meus comentaris
 	public void executarOperador(String new_operacio) {
 
 		int resultat;
