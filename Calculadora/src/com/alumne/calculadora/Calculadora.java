@@ -317,10 +317,11 @@ public class Calculadora {
 		int resultat;
 		inicialitza_resultat = true;
 		operacio = new_operacio;
-
+		// si la operacio es null, guardem en int el resultat, i el primer valor al resultat
 		if (operacio.equals("null")) {
 			resultat = getResultatInt();
 			valor1 = resultat;
+		//si no es null guardem el segon valor en int, executa la operacio i mostra el resultat 
 		} else {
 			valor2 = getResultatInt();
 			resultat = executarOperacio();
@@ -330,9 +331,10 @@ public class Calculadora {
 
 	}
 
+	// torna la operacio a null
 	public void executarIgual() {
 		int resultat = 0;
-
+		//guarda el resultat en int al valor 2. guardem el resultat de la operacio al resultat i el mostrem.
 		valor2 = getResultatInt();
 		resultat = executarOperacio();
 		mostraResultat(resultat);
@@ -340,12 +342,14 @@ public class Calculadora {
 		operacio = "null";
 	}
 
+	// Fa la operacio
 	public int executarOperacio() {
 		int resultat = 0;
 
+		//aquest es l'if de la divisio
 		if (operacio.equals("/")) {
 
-			// Comentar if i else ...
+			// si el valor dos es igual a 0 ens diu l'error "No es pot dividir per cero" si no es igual a 0 fa la operacio
 			if (valor2 == 0) {
 				JOptionPane.showMessageDialog(null, "No es pot dividir per cero", "Error", JOptionPane.ERROR_MESSAGE);
 				operacio = "null";
@@ -359,7 +363,7 @@ public class Calculadora {
 			// ... i descomentar aquesta part per a produir l'excepci√≥
 			// resultat = valor1 / valor2;
 		}
-
+		//segons el simbol far‡ les operacions sumar, restar o multiplicar
 		if (operacio.equals("*"))
 			resultat = valor1 * valor2;
 
@@ -372,6 +376,7 @@ public class Calculadora {
 		return resultat;
 	}
 
+	// 	Mostra el resultat de les operacions
 	public void mostraResultat(int resultat) {
 		setResultatString(Integer.toString(resultat));
 		valor1 = resultat;
