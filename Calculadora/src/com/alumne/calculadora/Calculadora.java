@@ -9,7 +9,7 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
-
+//prova 
 //Després de modificar la ruta als JAR i al JRE (default) feu un commit sense pujar el fitxer .classpath
 //Aneu amb compte amb la codificació de caracters perquè produeix errors de compilació difícils de detectar, potser falla un import per un caracter invisible
 
